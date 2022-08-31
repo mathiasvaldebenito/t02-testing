@@ -3,6 +3,8 @@ import os
 from rewriter.rewriter import *
 from rewriter.eval_rewriter import *
 from rewriter.if_true_rewriter import *
+from rewriter.plus_plus_rewriter import *
+from rewriter.if_without_else_rewriter import *
 
 path = "input-code/"
 dir_list = os.listdir(path)
@@ -17,7 +19,6 @@ for file in dir_list:
     # we apply all rewriters in the file
     for commandClass in RewriterCommand.__subclasses__():    
         command = commandClass()
-        print(command)
         tree = command.apply(tree)
     # export in a new file
     f = open("transformed-code/"+file, "w")
