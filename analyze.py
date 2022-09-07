@@ -1,10 +1,13 @@
 from ast import *
 import os
 from rules.rule import *
-from rules.eval_used import *
+""" from rules.eval_used import *
 from rules.uncouple_method import *
 from rules.dummy_if import *
-from rules.uninitialized_attribute import *
+from rules.uninitialized_attribute import * """
+from rules.SuspiciousVariableName import *
+from rules.NeverReadedVariable import *
+from rules.DataClass import *
 
 path = "input-code/"
 dir_list = os.listdir(path)
