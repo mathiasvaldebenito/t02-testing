@@ -6,7 +6,7 @@ from rewriter.if_true_rewriter import *
 from rewriter.plus_plus_rewriter import *
 from rewriter.if_without_else_rewriter import *
 
-path = "input-code/"
+path = "input-code-transform/"
 dir_list = os.listdir(path)
  
 print("Transforming files in '", path, "' :")
